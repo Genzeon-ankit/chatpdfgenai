@@ -1,0 +1,985 @@
+INFO:root:Running get_questions
+ERROR:root:Error in get_questions: BaseLLM.__call__() missing 1 required positional argument: 'prompt'
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:28:59] "[35m[1mPOST /get-questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '75e81b5e-6669-11ee-8759-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/38329158-ce93-4f19-b1c2-6e04e4808d9a'
+    'x-envoy-upstream-service-time': '128'
+    'apim-request-id': '38329158-ce93-4f19-b1c2-6e04e4808d9a'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:02:47 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/38329158-ce93-4f19-b1c2-6e04e4808d9a'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': '75e81b5e-6669-11ee-8759-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '15'
+    'apim-request-id': '0ed2652e-f30c-4ad5-9c1c-8f39bcac23dc'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:02:47 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/38329158-ce93-4f19-b1c2-6e04e4808d9a'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': '75e81b5e-6669-11ee-8759-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '37'
+    'apim-request-id': '2994102a-b7b8-4927-8f5f-b9a42ec3b8c2'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:02:53 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:32:54] "POST /upload HTTP/1.1" 200 -
+INFO:root:Running get_questions
+INFO:openai:error_code=DeploymentNotFound error_message='The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+ERROR:root:Error in get_questions: The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:32:58] "[35m[1mPOST /get-questions HTTP/1.1[0m" 500 -
+INFO:root:Running get_questions
+INFO:openai:error_code=DeploymentNotFound error_message='The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+ERROR:root:Error in get_questions: The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:33:15] "[35m[1mPOST /get-questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ef7c0018-6669-11ee-a207-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/c664067c-9be4-47bf-b46b-8ee70af23055'
+    'x-envoy-upstream-service-time': '57'
+    'apim-request-id': 'c664067c-9be4-47bf-b46b-8ee70af23055'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:06:11 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/c664067c-9be4-47bf-b46b-8ee70af23055'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'ef7c0018-6669-11ee-a207-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '13'
+    'apim-request-id': 'd323448f-9d26-44e2-a6ac-fcbddd5aca33'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:06:11 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/c664067c-9be4-47bf-b46b-8ee70af23055'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'ef7c0018-6669-11ee-a207-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '31'
+    'apim-request-id': '36143c3a-de6b-4f64-8f32-b7ddcdf7db5a'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:06:16 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:36:17] "POST /upload HTTP/1.1" 200 -
+INFO:root:Running get_questions
+ERROR:root:Error in get_questions: BaseLLM.__call__() missing 1 required positional argument: 'prompt'
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:36:20] "[35m[1mPOST /get-questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'f573a466-666b-11ee-9057-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/b9a48fff-2979-4bb6-b969-eb4681e83310'
+    'x-envoy-upstream-service-time': '53'
+    'apim-request-id': 'b9a48fff-2979-4bb6-b969-eb4681e83310'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:20:40 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/b9a48fff-2979-4bb6-b969-eb4681e83310'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'f573a466-666b-11ee-9057-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '15'
+    'apim-request-id': 'f9291599-cb2b-435f-b47f-6fe7bdf3dd7d'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:20:40 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/b9a48fff-2979-4bb6-b969-eb4681e83310'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'f573a466-666b-11ee-9057-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '38'
+    'apim-request-id': 'a318a610-cf62-4116-8977-4cf42e197ca2'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:20:45 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:50:46] "POST /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:50:54] "[31m[1mPOST /get-questions HTTP/1.1[0m" 405 -
+INFO:root:Running generate_questions
+ERROR:root:Error in generate_questions: BaseLLM.__call__() missing 1 required positional argument: 'prompt'
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:50:58] "[35m[1mGET /get-questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '49b270c0-666c-11ee-b5dc-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/38dba730-cda3-44c8-a105-300343ce7a26'
+    'x-envoy-upstream-service-time': '57'
+    'apim-request-id': '38dba730-cda3-44c8-a105-300343ce7a26'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:23:01 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/38dba730-cda3-44c8-a105-300343ce7a26'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': '49b270c0-666c-11ee-b5dc-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '15'
+    'apim-request-id': 'c01c58e6-3edb-405d-ac37-011d737ce096'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:23:01 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/38dba730-cda3-44c8-a105-300343ce7a26'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': '49b270c0-666c-11ee-b5dc-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '36'
+    'apim-request-id': '902b2b65-066e-4060-aa8a-02756a05a96a'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:23:06 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:53:07] "POST /upload HTTP/1.1" 200 -
+INFO:root:Running generate_questions
+ERROR:root:Error in generate_questions: BaseLLM.__call__() missing 1 required positional argument: 'prompt'
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:54:22] "[35m[1mGET /get-questions HTTP/1.1[0m" 500 -
+INFO:root:Running generate_questions
+ERROR:root:Error in generate_questions: BaseLLM.__call__() missing 1 required positional argument: 'prompt'
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:54:30] "[35m[1mGET /get-questions HTTP/1.1[0m" 500 -
+INFO:root:Running generate_questions
+ERROR:root:Error in generate_questions: BaseLLM.__call__() missing 1 required positional argument: 'prompt'
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:54:35] "[35m[1mGET /get-questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'dfc88326-666c-11ee-90b9-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/153390b7-43d8-4327-a6cd-6b4e5173f273'
+    'x-envoy-upstream-service-time': '99'
+    'apim-request-id': '153390b7-43d8-4327-a6cd-6b4e5173f273'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:27:13 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/153390b7-43d8-4327-a6cd-6b4e5173f273'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'dfc88326-666c-11ee-90b9-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '13'
+    'apim-request-id': 'fa3a4335-fee8-4316-8d95-463b36c93f93'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:27:13 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/153390b7-43d8-4327-a6cd-6b4e5173f273'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'dfc88326-666c-11ee-90b9-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '31'
+    'apim-request-id': '14dcf2d3-2947-4a74-9afb-be9acf030f14'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 06:27:18 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:57:19] "POST /upload HTTP/1.1" 200 -
+INFO:root:Running generate_questions
+ERROR:root:Error in generate_questions: BaseLLM.__call__() missing 1 required positional argument: 'prompt'
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 11:58:05] "[35m[1mGET /get-questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '4607425a-6672-11ee-9594-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/6b400995-b30d-4fd3-8696-ccf09ca55a69'
+    'x-envoy-upstream-service-time': '61'
+    'apim-request-id': '6b400995-b30d-4fd3-8696-ccf09ca55a69'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:05:52 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/6b400995-b30d-4fd3-8696-ccf09ca55a69'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': '4607425a-6672-11ee-9594-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '12'
+    'apim-request-id': '8fa6ff3b-b422-44ce-a429-21e363347e1d'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:05:52 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/6b400995-b30d-4fd3-8696-ccf09ca55a69'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': '4607425a-6672-11ee-9594-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '33'
+    'apim-request-id': '40f92e9c-ca7b-4b17-a25c-6a2995048d65'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:05:58 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 12:35:58] "POST /upload HTTP/1.1" 200 -
+INFO:root:Running generate_questions
+INFO:root:Generated questions: ['<|im_end|>']
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 12:36:03] "GET /get-questions HTTP/1.1" 200 -
+INFO:root:Running generate_questions
+INFO:root:Generated questions: ['<|im_end|>']
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 12:36:15] "GET /get-questions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'c6113e10-6672-11ee-8b9e-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/37a9b7d6-f9e5-4f72-82b4-f5ab9855da4f'
+    'x-envoy-upstream-service-time': '61'
+    'apim-request-id': '37a9b7d6-f9e5-4f72-82b4-f5ab9855da4f'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:09:27 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/37a9b7d6-f9e5-4f72-82b4-f5ab9855da4f'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'c6113e10-6672-11ee-8b9e-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '18'
+    'apim-request-id': 'f0112d29-b635-44ce-8887-d46db771c8bc'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:09:27 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/37a9b7d6-f9e5-4f72-82b4-f5ab9855da4f'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'c6113e10-6672-11ee-8b9e-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '45'
+    'apim-request-id': '3f9674ab-a519-43d9-b7e3-30327991c509'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:09:33 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 12:39:33] "POST /upload HTTP/1.1" 200 -
+INFO:root:Running generate_questions
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 5 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 5 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 1 second. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 1 second. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 10 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 10 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 6 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 8.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 6 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:root:Generated questions: ['<|im_end|>']
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 12:39:58] "GET /get-questions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ba0a9d10-6678-11ee-ab97-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/64ab7be4-2978-467c-85b7-cf86f05627c8'
+    'x-envoy-upstream-service-time': '56'
+    'apim-request-id': '64ab7be4-2978-467c-85b7-cf86f05627c8'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:52:03 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/64ab7be4-2978-467c-85b7-cf86f05627c8'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'ba0a9d10-6678-11ee-ab97-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '11'
+    'apim-request-id': '9d9936bb-6a96-4879-92e3-33a8bd2f6a89'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:52:03 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/64ab7be4-2978-467c-85b7-cf86f05627c8'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'ba0a9d10-6678-11ee-ab97-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '38'
+    'apim-request-id': '72922e2b-f654-490b-9d7b-492560a6d0c8'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 07:52:10 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 13:22:10] "POST /upload HTTP/1.1" 200 -
+INFO:root:Running ask
+INFO:root:Prepared LLM and QA
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 6 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 6 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 2 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 2 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 10 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 10 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 6 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 8.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 6 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:openai:error_code=429 error_message='Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 10 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit.' error_param=None error_type=None message='OpenAI API error received' stream_error=False
+WARNING:langchain.llms.base:Retrying langchain.llms.openai.completion_with_retry.<locals>._completion_with_retry in 10.0 seconds as it raised RateLimitError: Requests to the Creates a completion for the provided prompt, parameters and chosen model. Operation under Azure OpenAI API version 2023-05-15 have exceeded call rate limit of your current OpenAI S0 pricing tier. Please retry after 10 seconds. Please go here: https://aka.ms/oai/quotaincrease if you would like to further increase the default rate limit..
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 13:22:59] "POST /ask HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 13:24:08] "[31m[1mGET /get-questions HTTP/1.1[0m" 405 -
+INFO:root:Running get_questions
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 13:24:13] "[31m[1mPOST /get-questions HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ad7f89da-6683-11ee-b085-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/22802c7f-6029-4db5-9189-5247f620f1ca'
+    'x-envoy-upstream-service-time': '71'
+    'apim-request-id': '22802c7f-6029-4db5-9189-5247f620f1ca'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:10:27 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/22802c7f-6029-4db5-9189-5247f620f1ca'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'ad7f89da-6683-11ee-b085-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '19'
+    'apim-request-id': 'd39661b0-afc0-4ea7-a024-d7872ff6c869'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:10:28 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/22802c7f-6029-4db5-9189-5247f620f1ca'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'ad7f89da-6683-11ee-b085-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '36'
+    'apim-request-id': '94a875c0-cdd5-4989-a90c-9cbe6a353ef2'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:10:33 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 14:40:33] "POST /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 14:40:37] "[31m[1mPOST /get-questions HTTP/1.1[0m" 405 -
+INFO:root:Running generate_questions
+ERROR:root:Error in generate_questions: 'str' object has no attribute 'content'
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 14:40:45] "[35m[1mGET /get-questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'f9e1584d-6683-11ee-9c7b-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/9f134400-15ed-4c2a-a9a6-365752ad357d'
+    'x-envoy-upstream-service-time': '79'
+    'apim-request-id': '9f134400-15ed-4c2a-a9a6-365752ad357d'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:12:36 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/9f134400-15ed-4c2a-a9a6-365752ad357d'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'f9e1584d-6683-11ee-9c7b-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '18'
+    'apim-request-id': 'c5386acc-f11b-4a95-b552-cf690c8ca302'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:12:36 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/9f134400-15ed-4c2a-a9a6-365752ad357d'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'f9e1584d-6683-11ee-9c7b-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '54'
+    'apim-request-id': '81cf58f1-32f4-4101-8f66-0a587655d414'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:12:42 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 14:42:42] "POST /upload HTTP/1.1" 200 -
+INFO:root:Running generate_questions
+INFO:root:Generated questions: ['1. What is the Order ID?', '2. What is the Invoice Number?', '3. What is the IMEI/Serial number of the device?']
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 14:42:54] "GET /get-questions HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'dd80e13c-6684-11ee-be6e-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/a36f2186-ed13-465e-8dbb-2790c7650fd0'
+    'x-envoy-upstream-service-time': '64'
+    'apim-request-id': 'a36f2186-ed13-465e-8dbb-2790c7650fd0'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:18:57 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/a36f2186-ed13-465e-8dbb-2790c7650fd0'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'dd80e13c-6684-11ee-be6e-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '21'
+    'apim-request-id': '7f595410-9c64-4be1-8334-cb54b84c72dd'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:18:57 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/a36f2186-ed13-465e-8dbb-2790c7650fd0'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'dd80e13c-6684-11ee-be6e-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '31'
+    'apim-request-id': '199abb9a-fa05-40f3-856b-41ecfe43e958'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:19:02 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 14:49:03] "POST /upload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '061e3ea9-6685-11ee-a06d-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/ce26c7f6-c4e9-423d-97f2-c4b27e50179e'
+    'x-envoy-upstream-service-time': '60'
+    'apim-request-id': 'ce26c7f6-c4e9-423d-97f2-c4b27e50179e'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:20:05 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/ce26c7f6-c4e9-423d-97f2-c4b27e50179e'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': '061e3ea9-6685-11ee-a06d-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '18'
+    'apim-request-id': '40a932ea-f955-4020-a16f-abc3bd6a1641'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:20:05 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/ce26c7f6-c4e9-423d-97f2-c4b27e50179e'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': '061e3ea9-6685-11ee-a06d-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '44'
+    'apim-request-id': '43c8dc9c-cc80-4549-b3e3-2897726cecbd'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 09:20:10 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 14:50:12] "POST /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 14:54:47] "[31m[1mGET /get-questions HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 16:21:41] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+INFO:root:Running upload_file for user: {userId}
+INFO:root:Cleared previous data for user 2
+INFO:root:File saved and encrypted
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyze?readingOrder=basic'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/pdf'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'd974c37c-6691-11ee-b984-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Operation-Location': 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/45b8a8c4-87c7-49d1-a9be-4364ea9a0d67'
+    'x-envoy-upstream-service-time': '78'
+    'apim-request-id': '45b8a8c4-87c7-49d1-a9be-4364ea9a0d67'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 10:51:54 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/45b8a8c4-87c7-49d1-a9be-4364ea9a0d67'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'd974c37c-6691-11ee-b984-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '106'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '11'
+    'apim-request-id': 'bac709f8-a1c7-4c2e-b7a4-968b44092b86'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 10:51:54 GMT'
+INFO:azure.core.pipeline.policies.http_logging_policy:Request URL: 'https://pocd-extract-demo.cognitiveservices.azure.com/formrecognizer/v2.1/layout/analyzeResults/45b8a8c4-87c7-49d1-a9be-4364ea9a0d67'
+Request method: 'GET'
+Request headers:
+    'x-ms-client-request-id': 'd974c37c-6691-11ee-b984-bc6ee2b166be'
+    'User-Agent': 'azsdk-python-ai-formrecognizer/3.3.0 Python/3.11.3 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+No body was attached to the request
+INFO:azure.core.pipeline.policies.http_logging_policy:Response status: 200
+Response headers:
+    'Content-Length': '93186'
+    'Content-Type': 'application/json; charset=utf-8'
+    'x-envoy-upstream-service-time': '33'
+    'apim-request-id': 'fd00d458-749a-4417-8a38-5f6a5b724bb0'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'x-content-type-options': 'nosniff'
+    'x-ms-region': 'East US'
+    'Date': 'Mon, 09 Oct 2023 10:51:59 GMT'
+INFO:root:Length of text extracted from images (OCR): 3301
+INFO:root:Length of text extracted directly from PDF: 3104
+INFO:root:Document text loaded
+INFO:root:Document text split
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:Created retriever
+INFO:werkzeug:127.0.0.1 - - [09/Oct/2023 16:22:00] "POST /upload HTTP/1.1" 200 -
